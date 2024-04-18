@@ -1,5 +1,9 @@
 def extract_digits(user_input):
-    return [int(digit) for digit in str(user_input)]
+    if type(user_input) is int:
+        return [int(digit) for digit in str(user_input)]
+    if type(user_input) is str:
+        return [ord(letter)-ord('а')+1 for letter in user_input.lower()]
+
 
 
 def magic_sum(numbers_list):
